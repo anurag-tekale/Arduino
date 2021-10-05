@@ -1,7 +1,6 @@
 /***********************************************************
 File name: 24_joyStick.ino
 Description: you can see the joy stick information on the 1602.
-
 ***********************************************************/
 #include <LiquidCrystal.h>
 LiquidCrystal lcd(4, 6, 10, 11, 12, 13);  
@@ -36,5 +35,10 @@ int JoyStick_Z = 2; //Defined PS2 joystick Z axis,
     lcd.print("Y:"); // Print the unit of the centigrade temperature to the LCD.
     lcd.print(y);// Print a centigrade temperature to the LCD
     lcd.print("   ");// Print a message of "Temp: "to the LCD
+
+    lcd.setCursor(13, 1); // set the cursor to column 0, line 0 
+    lcd.print("Z:"); // Print the unit of the centigrade temperature to the LCD.
+    lcd.print(z);// Print a centigrade temperature to the LCD
+
     delay(500);
   }
